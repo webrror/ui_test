@@ -49,22 +49,20 @@ class Home extends StatelessWidget {
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 3),
               itemBuilder: (context, index) {
-                return Container(
-                  child: Column(
-                    children: [
-                      Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Colors.blue,
-                          ),
-                          child: SizedBox(
-                            height: 60,
-                            width: 60,
-                            child: myUpdates[index]['icon'],
-                          )),
-                      Text(myUpdates[index]['title'])
-                    ],
-                  ),
+                return Column(
+                  children: [
+                    Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.blue,
+                        ),
+                        child: SizedBox(
+                          height: 60,
+                          width: 60,
+                          child: myUpdates[index]['icon'],
+                        )),
+                    Text(myUpdates[index]['title'])
+                  ],
                 );
               },
               itemCount: myUpdates.length,
